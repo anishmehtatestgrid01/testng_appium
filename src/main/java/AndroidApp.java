@@ -16,13 +16,13 @@ public class AndroidApp {
 
 
     //Obtain Run URL from Link Provided for Organization
-    static String TG_DEVICE_URL="http://testos.testgrid.io:8057/wd/hub";
+    static String TG_DEVICE_URL="http://xyz.com/wd/hub";
 
     AppiumDriver driver;
 
     //Obtain Capabilities from Link Provided for Organization
     static String TG_DEVICE_NAME="Samsung Galaxy S10";
-    static String TG_DEVICE_UDID="R58M90X176B";
+    static String TG_DEVICE_UDID="";
     static String TG_DEVICE_PLATFORMNAME="Android";
     static String TG_DEVICE_PLATFORMVERSION="12";
 
