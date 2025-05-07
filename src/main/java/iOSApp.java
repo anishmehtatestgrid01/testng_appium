@@ -12,14 +12,11 @@ import org.testng.annotations.Test;
 
 public class iOSApp {
 
-    String userName = System.getenv("LT_USERNAME") == null ?
-            "username" : System.getenv("LT_USERNAME"); //Add username here
-    String accessKey = System.getenv("LT_ACCESS_KEY") == null ?
-            "accessKey" : System.getenv("LT_ACCESS_KEY"); //Add accessKey here
 
-    public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
 
-    AppiumDriver driver;
+  
+
+    IOSDriver driver;
 
     @Test
     @org.testng.annotations.Parameters(value = {"device", "version", "platform"})
@@ -41,8 +38,8 @@ public class iOSApp {
             capabilities.setCapability("devicelog", true);
             //capabilities.setCapability("geoLocation", "HK");
 
-            String hub = "https://" + userName + ":" + accessKey + gridURL;
-            driver = new AppiumDriver(new URL(hub), capabilities);
+                        URL appiumServerUrl = new URL("http://poc2.testgrid.io/appium_36001/wd/hub");
+            driver = new IOSDriver(appiumServerUrl, capabilities);
 
             WebDriverWait Wait = new WebDriverWait(driver,30);
 
